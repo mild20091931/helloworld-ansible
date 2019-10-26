@@ -1,0 +1,7 @@
+---
+- name: Ansible Lab2-1
+  hosts: web
+  remote_user: root
+
+  tasks:
+    - ping:
