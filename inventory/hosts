@@ -1,5 +1,15 @@
 [web]
 labx
 
-[server]
+[db]
 serverx
+
+[wordpress:children]
+web
+db
+
+[server]
+bluex.example.com
+greenx.example.com
+
+
