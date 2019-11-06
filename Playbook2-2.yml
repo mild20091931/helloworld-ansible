@@ -1,0 +1,9 @@
+---
+- name: GET HOSTNAME by Ansible
+  hosts: web
+  remote_user: root
+  tasks:
+   - name: Call command hostname
+     command: hostname
+     register: r
+   - debug: msg="My hostname is {{ r.stdout }}"
