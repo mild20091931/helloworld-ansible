@@ -1,7 +1,7 @@
 ---
 - name: Ansible Lab2-1
-  hosts: web
-  remote_user: root
+  hosts: db
+  remote_user: mild
 
   tasks:
     - ping:
