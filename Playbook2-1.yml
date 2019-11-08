@@ -1,6 +1,6 @@
 ---
 - name: Ansible Lab2-1
-  hosts: db
+  hosts: "{{ myhosts }}"
   remote_user: mild
 
   tasks:
