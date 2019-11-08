@@ -1,0 +1,7 @@
+---
+- name: Ansible lab 3
+  hosts: server
+  become: yes
+  remote_user: mild
+  roles:
+   - { role: dns }

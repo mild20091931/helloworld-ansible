@@ -1,0 +1,7 @@
+---
+- hosts: web
+  gather_facts: false
+  tasks:
+    - name: Show myvar value
+      debug:
+        msg: "My var is {{ myvar }}"

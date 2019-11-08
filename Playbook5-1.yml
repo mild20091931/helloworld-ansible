@@ -1,0 +1,12 @@
+---
+- hosts: all
+  gather_facts: false
+  vars:
+    myvar: "Hello world"
+  tasks:
+    - name: define variable
+      debug: msg="{{ myvar | default(" Foo Bar")  }}"
+    - name: undefine variable
+      debug: msg="{{ undefined_var | default("Foo Bar") }}"
+    - name: default with secound parameter
+      debug: msg="{{ lookup('env','HOME') | default('/home/default',true) }}"

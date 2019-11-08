@@ -1,0 +1,15 @@
+[web]
+35.198.194.213 ansible_user=mild
+
+[db]
+35.186.144.66 ansible_become=true
+
+[wordpress:children]
+web
+db
+
+[server]
+bluex
+
+[web:vars]
+myvar="Variable in Inventory file"
