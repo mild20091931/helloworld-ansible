@@ -1,0 +1,9 @@
+---
+# tasks file for getname
+- name: get fact
+  setup:
+  register: r
+- name: hostname
+  debug: var=r.ansible_facts.ansible_hostname
+- name: fqdn
+  debug: var=r.ansible_facts.ansible_fqdn
