@@ -1,13 +1,16 @@
 [web]
-35.198.194.213 ansible_user=mild
+labx ansible_user=mild
 
 [db]
-35.198.252.61 ansible_become=true
+serverx ansible_become=true
 
 [wordpress:children]
 web
 db
 
 [server]
-bluex.example.com
-greenx.example.com
+bluex
+greenx
+
+[web:vars]
+myvar="Variable in Inventory file"
