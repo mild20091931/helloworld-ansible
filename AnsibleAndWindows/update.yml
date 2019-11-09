@@ -1,0 +1,10 @@
+---
+- hosts: ad
+  gather_facts: false
+  tasks:
+    - name: Install only pacticular update based on the KB numbers
+      win_updates:
+        category_name:
+          - SecurityUpdates
+        whitelist:
+          - KB4512574

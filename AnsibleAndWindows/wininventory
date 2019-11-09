@@ -1,0 +1,9 @@
+[ad]
+ad.c.int493.internal
+
+[ad:vars]
+ansible_user = tassaneewan_mild
+ansible_password = '7Yd.NnY\C&~($q>'
+ansible_port = 5986
+ansible_connection = winrm
+ansible_winrm_server_cert_validation = ignore

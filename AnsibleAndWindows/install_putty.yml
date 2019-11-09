@@ -1,0 +1,9 @@
+---
+- hosts:  ad
+  gather_facts: false
+  tasks:
+    - name: Install putty
+      win_package:
+        path: https://the.earth.li/~sgtatham/putty/latest/w32/putty-0.73-installer.msi
+        product_id: 'putty'
+        state: present

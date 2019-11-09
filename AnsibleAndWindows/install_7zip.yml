@@ -1,0 +1,8 @@
+---
+- hosts: ad
+  gather_facts: false
+  tasks:
+    - name: Install 7zip by chocholatey
+      win_chocolatey:
+        name: 7zip
+        state: present
