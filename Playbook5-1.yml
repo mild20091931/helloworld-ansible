@@ -1,5 +1,5 @@
 ---
-- hosts: all
+- hosts: db
   gather_facts: false
   vars:
     myvar: "Hello world"
@@ -10,3 +10,9 @@
       debug: msg="{{ undefined_var | default("Foo Bar") }}"
     - name: default with secound parameter
       debug: msg="{{ lookup('env','HOME') | default('/home/default',true) }}"
+    - name: without default
+      debug: msg="{{ lookup('env','I_HOME')  }}"
+    - name: default with single parameter
+      debug: msg="{{ lookup('env','I_HOME')| default('/home/defualt') }}"
+    - name: default with secound parameter
+      debug: msg="{{ lookup('env','I_HOME')| default('/home/defualt',true) }}"
