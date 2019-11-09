@@ -1,0 +1,15 @@
+---
+- name: test create file use loop
+  hosts: all
+  gather_facts: false
+  connection: local
+  become: yes
+  tasks:
+    - name: creating file with specific mode
+      file: dest={{ item.filename  }} state=touch mode={{ item.filemode | default(omit) }}
+      loop:
+        - filename: apple.txt
+        - filename: orange.txt
+        - filename: grape.txt
+          filemode: "0444"
+

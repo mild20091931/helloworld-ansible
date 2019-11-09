@@ -1,0 +1,22 @@
+---
+- hosts: all
+  gather_facts: false
+  vars:
+    data:
+      - apple
+      - orange
+      - grape
+      - pineapple
+  tasks:
+    - name: random from list
+      debug: msg="{{ data | random }}"
+    - name: random number between 0 to number
+      debug: msg="{{ 102 | random }}"
+    - name: random number between 0 to step 6
+      debug: msg="{{ 102 | random(step=6) }}"
+    - name: random number between 0 to step 10
+      debug: msg="{{ 102 | random(start=2, step=10) }}"
+    - name: shuffle from list
+      debug: msg="{{ data | shuffle }}"
+    - name: Random MAC address 1
+      debug: msg="{{ '51:47:00' | random_mac }}"

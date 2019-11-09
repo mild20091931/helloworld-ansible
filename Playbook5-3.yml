@@ -1,0 +1,19 @@
+---
+- hosts: all
+  gather_facts: false
+  vars:
+   number: 39
+   list: [3,7,10,20,90,23,1]
+  tasks:
+   - name: Get the base 10 logarithm
+     debug: msg="{{ number | log(10) }}"
+   - name: Get the power of n
+     debug: msg="{{ number | pow(2) }}"
+   - name: Get the squre root
+     debug: msg="{{ number | root }}"
+   - name: Get the add
+     debug: msg="{{ number + 34 }}"
+   - name: Get the power of n (alternative)
+     debug: msg="{{ number ** 2 }}"
+   - name: Find max on list {{ list }}
+     debug: msg="{{ list | max }}"
